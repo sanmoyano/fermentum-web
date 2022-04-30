@@ -1,0 +1,34 @@
+.image__box {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.image__box div {
+    transition: all 0.5s;
+}
+
+
+.image__box img {
+    transition: all 0.5s;
+    display: block;
+    height: auto;
+    opacity: 1;
+    transform: scale(1);
+    height: 500px;
+    object-fit: cover;
+    filter: blur(0);
+}
+
+.image__box:hover img {
+    transform: scale(1.2);
+    opacity: .5;
+    filter: blur(1px);
+}
+
+.image__box:hover div {
+    transform: scale(1.5);
+}

@@ -1,29 +1,28 @@
-import { GridItem, Flex } from "@chakra-ui/react";
+import { GridItem, Flex, Box } from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
 
-const CardHome = ({ img, titulo }) => {
+const CardHome = ({ img, titulo, redirection }) => {
     return (
         <GridItem
-            alignItems={"center"}
-            bg={"brand.900"}
-            bgImage={img}
-            bgPosition={"center"}
-            bgSize={"cover"}
-            borderRadius={"50%"}
+            bgColor={"brand.100"}
+            borderRadius={"3px"}
             colSpan={1}
             display={"flex"}
             h={"100%"}
-            justifyContent={"center"}
-            opacity={1}
-            sx={{
-                "&:hover": {
-                    opacity: 0.5,
-                    transform: "scale(1.05)",
-                },
-            }}
-            transition={"all .5s ease-in-out"}
-            w={"100%"}
         >
-            <Flex>{titulo}</Flex>
+            <Box className="image__box">
+                <img alt="" src={img} />
+                <Flex
+                    bgColor={"brand.100"}
+                    color={"brand.500"}
+                    fontFamily={"heading"}
+                    fontSize={"xl"}
+                    p={2}
+                    position={"absolute"}
+                >
+                    <NavLink to={redirection}>{titulo}</NavLink>
+                </Flex>
+            </Box>
         </GridItem>
     );
 };

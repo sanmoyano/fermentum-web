@@ -3,6 +3,7 @@ import { Stack, Slide } from "@chakra-ui/react";
 import NavLinks from "../Components/NavLinks";
 
 const NavBar = ({ open, closeClick }) => {
+    console.log(open);
     const navLinksSettings = {
         fontFamily: "body",
         fontSize: "md",
@@ -32,7 +33,17 @@ const NavBar = ({ open, closeClick }) => {
         w: "100%",
     };
 
-    if (open) {
+    if (open === false) {
+        return (
+            <Stack {...closeNav} {...navLinksSettings} aria-label="main navigation">
+                <NavLinks close={closeClick} item={"cervezas"} navItem={"cervezas"} />
+                <NavLinks close={closeClick} item={"servicios"} navItem={"servicios"} />
+                <NavLinks close={closeClick} item={"donde tomarnos"} navItem={"donde"} />
+                <NavLinks close={closeClick} item={"nosotros"} navItem={"nosotros"} />
+                <NavLinks close={closeClick} item={"contacto"} navItem={"contacto"} />
+            </Stack>
+        );
+    } else {
         return (
             <Slide direction={"left"} in={open} unmountOnExit={true}>
                 <Stack {...openNav} {...navLinksSettings} aria-label="main navigation">
@@ -44,16 +55,6 @@ const NavBar = ({ open, closeClick }) => {
                     <NavLinks close={closeClick} item={"contacto"} navItem={"contacto"} />
                 </Stack>
             </Slide>
-        );
-    } else {
-        return (
-            <Stack {...closeNav} {...navLinksSettings} aria-label="main navigation">
-                <NavLinks close={closeClick} item={"cervezas"} navItem={"cervezas"} />
-                <NavLinks close={closeClick} item={"servicios"} navItem={"servicios"} />
-                <NavLinks close={closeClick} item={"donde tomarnos"} navItem={"donde"} />
-                <NavLinks close={closeClick} item={"nosotros"} navItem={"nosotros"} />
-                <NavLinks close={closeClick} item={"contacto"} navItem={"contacto"} />
-            </Stack>
         );
     }
 };
