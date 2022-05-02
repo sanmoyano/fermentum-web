@@ -1,21 +1,18 @@
 import { Route, Routes } from "react-router-dom";
 
 import Home from "../Pages/Home";
-import Cervezas from "../Pages/Cervezas";
-import Servicios from "../Pages/Servicios";
-import Donde from "../Pages/Donde";
-import Nosotros from "../Pages/Nosotros";
 import Contacto from "../Pages/Contacto";
+import ItemListContainer from "../Container/ItemListContainer";
 
 const Main = () => {
     return (
         <main>
             <Routes>
                 <Route element={<Home />} path="/" />
-                <Route element={<Cervezas />} path="/cervezas" />
-                <Route element={<Servicios />} path="/servicios" />
-                <Route element={<Donde />} path="/donde" />
-                <Route element={<Nosotros />} path="/nosotros" />
+                <Route element={<ItemListContainer />} path="/cat/:idCat" />
+                <Route element={<ItemListContainer />} path="/cat/:idCat" />
+                <Route element={<ItemListContainer />} path="/cat/:idCat" />
+                <Route element={<ItemListContainer />} path="/cat/:idCat" />
                 <Route element={<Contacto />} path="/contacto" />
             </Routes>
         </main>

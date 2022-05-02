@@ -1,9 +1,9 @@
 import { Stack, Slide } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 import NavLinks from "../Components/NavLinks";
 
 const NavBar = ({ open, closeClick }) => {
-    console.log(open);
     const navLinksSettings = {
         fontFamily: "body",
         fontSize: "md",
@@ -36,23 +36,23 @@ const NavBar = ({ open, closeClick }) => {
     if (open === false) {
         return (
             <Stack {...closeNav} {...navLinksSettings} aria-label="main navigation">
-                <NavLinks close={closeClick} item={"cervezas"} navItem={"cervezas"} />
-                <NavLinks close={closeClick} item={"servicios"} navItem={"servicios"} />
-                <NavLinks close={closeClick} item={"donde tomarnos"} navItem={"donde"} />
-                <NavLinks close={closeClick} item={"nosotros"} navItem={"nosotros"} />
-                <NavLinks close={closeClick} item={"contacto"} navItem={"contacto"} />
+                <NavLinks item={"cervezas"} to={"cat/cervezas"} />
+                <NavLinks item={"servicios"} to={"cat/servicios"} />
+                <NavLinks item={"donde tomarnos"} to={"cat/donde"} />
+                <NavLinks item={"nosotros"} to={"cat/nosotros"} />
+                <NavLinks item={"contacto"} to={"contacto"} />
             </Stack>
         );
     } else {
         return (
             <Slide direction={"left"} in={open} unmountOnExit={true}>
                 <Stack {...openNav} {...navLinksSettings} aria-label="main navigation">
-                    <NavLinks close={closeClick} item={"inicio"} navItem={""} />
-                    <NavLinks close={closeClick} item={"cervezas"} navItem={"cervezas"} />
-                    <NavLinks close={closeClick} item={"servicios"} navItem={"servicios"} />
-                    <NavLinks close={closeClick} item={"donde tomarnos"} navItem={"donde"} />
-                    <NavLinks close={closeClick} item={"nosotros"} navItem={"nosotros"} />
-                    <NavLinks close={closeClick} item={"contacto"} navItem={"contacto"} />
+                    <NavLinks close={closeClick} item={"inicio"} to={""} />
+                    <NavLinks close={closeClick} item={"cervezas"} to={"cat/cervezas"} />
+                    <NavLinks close={closeClick} item={"servicios"} to={"cat/servicios"} />
+                    <NavLinks close={closeClick} item={"donde tomarnos"} to={"cat/donde"} />
+                    <NavLinks close={closeClick} item={"nosotros"} to={"cat/nosotros"} />
+                    <NavLinks close={closeClick} item={"contacto"} to={"contacto"} />
                 </Stack>
             </Slide>
         );

@@ -18,13 +18,11 @@ const Header = () => {
         <Stack
             alignItems="center"
             as="header"
-            backdropFilter={`blur(10px)`}
-            backgroundColor={{ base: "brand.100", md: "brand.700" }}
+            backgroundColor={"brand.100"}
             direction="row"
             h={24}
             justifyContent={"space-between"}
-            position={"fixed"}
-            transition="all 0.2s ease-in-out"
+            position={{ base: "fixed", md: "static" }}
             w="100%"
             zIndex={1}
         >

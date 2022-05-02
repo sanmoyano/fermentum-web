@@ -1,5 +1,4 @@
-import { Stack, Box, Text, Button, Image, Grid, GridItem, Flex } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
+import { Stack, Text, Grid } from "@chakra-ui/react";
 
 import CardHome from "./CardHome";
 
@@ -19,7 +18,6 @@ const HomeComponent = () => {
             <Grid
                 alignItems={"center"}
                 gap={6}
-                minChildWidth="120px"
                 templateColumns={{
                     base: "repeat(1, 300px)",
                     md: "repeat(2, 300px)",
@@ -33,17 +31,17 @@ const HomeComponent = () => {
             >
                 <CardHome
                     img={"https://fermentumfaber.com/imagenes/bar_04.jpg"}
-                    redirection={"/cervezas"}
+                    redirection={"cat/cervezas"}
                     titulo={"nustros estilos"}
                 />
                 <CardHome
                     img={"https://fermentumfaber.com/imagenes/06_formatos.jpg"}
-                    redirection={"/servicios"}
+                    redirection={"cat/servicios"}
                     titulo={"servicios para bares"}
                 />
                 <CardHome
                     img={"https://fermentumfaber.com/imagenes/donde_trescalaveras.jpg"}
-                    redirection={"/donde"}
+                    redirection={"cat/donde"}
                     titulo={"donde encontrarnos"}
                 />
                 <CardHome
@@ -57,4 +55,3 @@ const HomeComponent = () => {
 };
 
 export default HomeComponent;
-// templateColumns={"repeat(4, 400px)"}
