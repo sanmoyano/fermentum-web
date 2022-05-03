@@ -41,7 +41,7 @@ const Hero = () => {
                     Somos una reconocida fábrica de cervezas en la Ciudad de Córdoba.
                 </Text>
                 <Button size={"md"} width={{ base: "", sm: "xs" }}>
-                    <Link to="/nosotros">sobre nosotros</Link>
+                    <Link to="/cat/nosotros">sobre nosotros</Link>
                 </Button>
             </Stack>
         </Box>

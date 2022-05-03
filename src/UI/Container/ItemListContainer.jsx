@@ -13,8 +13,6 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(true);
     const { idCat } = useParams();
 
-    console.log(idCat);
-
     useEffect(() => {
         const dbColection = collection(db, "mundoFermentum");
         const dbConsutla = getDocs(dbColection);
