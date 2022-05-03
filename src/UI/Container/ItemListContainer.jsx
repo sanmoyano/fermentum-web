@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { Flex, Spinner } from "@chakra-ui/react";
-import { Box, Stack, Text, Grid, GridItem } from "@chakra-ui/react";
 
 import { db } from "../../API/firebase";
 import TitleSection from "../Components/TitleSection";
