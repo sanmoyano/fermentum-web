@@ -21,12 +21,12 @@ const HomeComponent = () => {
                 templateColumns={{
                     base: "repeat(1, 300px)",
                     md: "repeat(2, 300px)",
-                    lg: "repeat(4,400px)",
+                    lg: "repeat(4,auto)",
                 }}
                 templateRows={{
                     base: "repeat(4, 300px)",
                     md: "repeat(2, 300px)",
-                    lg: "repeat(1,400px)",
+                    lg: "repeat(1,300px)",
                 }}
             >
                 <CardHome
