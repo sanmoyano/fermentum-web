@@ -2,6 +2,7 @@ import { Box, HStack, Stack, Text, Link } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faFacebookF, faSpotify } from "@fortawesome/free-brands-svg-icons";
 
+import Formulario from "../Components/Formulario";
 import FooterInfo from "../Components/FooterInfo";
 
 const Footer = () => {
@@ -27,7 +28,9 @@ const Footer = () => {
                     spacing={12}
                     width={"100%"}
                 >
-                    <Box>FORMULARIO</Box>
+                    <Box>
+                        <Formulario />
+                    </Box>
                     <Stack spacing={4}>
                         <Text fontFamily={"heading"} fontSize={"2xl"}>
                             HORARIOS

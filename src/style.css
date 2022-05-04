@@ -66,3 +66,13 @@
 .masterCard:hover .masterCard--description {
     opacity: .9;
 }
+
+.form--input {
+    padding: .5rem;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.form--textarea {
+    color: #f5f5f5;
+}

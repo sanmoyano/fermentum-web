@@ -1,10 +1,16 @@
-import { Text } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
+
+import Formulario from "../Components/Formulario";
+import TitleSection from "../Components/TitleSection";
 
 const Contacto = () => {
     return (
-        <Text bgColor={"red.500"} fontSize={"200px"}>
-            Contacto
-        </Text>
+        <>
+            <TitleSection cat={"contacto"} />
+            <Stack alignItems={"center"} justifyContent={"center"} p={6}>
+                <Formulario />
+            </Stack>
+        </>
     );
 };
 
