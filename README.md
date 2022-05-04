@@ -9,7 +9,7 @@
         <a href="https://github.com/sanmoyano/fermentum-web.git"><strong>Docuementacion »</strong></a>
         <br />
         <br />
-        <a href="https://fermentum-app.firebaseapp.com/">Ver Web App »</a>
+        <a href="https://fermentum-web.vercel.app/">Ver Web »</a>
     </p>
 </div>
 
