@@ -70,6 +70,9 @@ const Formulario = () => {
     return (
         <FormControl as={"form"} onSubmit={handleSubmit}>
             <Stack justifyContent={"center"} maxWidth={"700px"}>
+                <FormHelperText color={"brand.100"}>
+                    Si te interesa vender nuestros productos llamá al <strong>(351)371-3106</strong>
+                </FormHelperText>
                 <Stack>
                     <FormLabel htmlFor="nombre">Nombre</FormLabel>
                     <input
