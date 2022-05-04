@@ -14,12 +14,13 @@
 </div>
 
 ## Sobre el proyecto
+[![Screnshot](https://firebasestorage.googleapis.com/v0/b/sm-portfolio-4c746.appspot.com/o/fmtm_landing-min.jpg?alt=media&token=7161ca40-b34c-43b7-9bed-39cc5685620d)](https://fermentumfaber.com/)
 
 El proyecto se trata del desarrollo de la landing page de una fabrica de cervezas artesanales de la ciudad de de cordoba. Con el objetivo de mostrar cuales son los servicios y productos que ofrece la marca.
 
 ### Realizado en:
 
-- [React.js](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
 - La aplicacion web se encuentra deployada en [Vercel](https://vercel.com/)
 
 ### Librerias externas
